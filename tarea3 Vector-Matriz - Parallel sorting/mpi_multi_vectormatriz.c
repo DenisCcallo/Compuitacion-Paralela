@@ -1,26 +1,3 @@
-/* File:     mpi_mat_vect_time.c
- *
- * Purpose:  Implement parallel matrix-vector multiplication using
- *           one-dimensional arrays to store the vectors and the
- *           matrix.  Vectors use block distributions and the
- *           matrix is distributed by block rows.  This version
- *           generates a random matrix A and a random vector x.
- *           It prints out the run-time.
- *
- * Compile:  mpicc -g -Wall -o mpi_mat_vect_time mpi_mat_vect_time.c
- * Run:      mpiexec -n <number of processes> ./mpi_mat_vect_time
- *
- * Input:    Dimensions of the matrix (m = number of rows, n
- *              = number of columns)
- * Output:   Elapsed time for execution of the multiplication
- *
- * Notes:     
- *    1. Number of processes should evenly divide both m and n
- *    2. Define DEBUG for verbose output, including the product
- *       vector y
- *
- * IPP:  Section 3.6.2 (pp. 122 and ff.)
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
